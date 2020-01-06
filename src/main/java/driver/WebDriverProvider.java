@@ -15,8 +15,7 @@ public class WebDriverProvider implements IWebDriverProvider {
         return Optional.ofNullable(CACHE.get());
     }
 
-    public static WebDriver get(String browserName)
-    {
+    public static WebDriver get(String browserName) {
         return getFromCache().orElseGet(() -> {
             WebDriverFactory factory = WebDriverFactory.getInstance(browserName);
             WebDriver driver = factory.create();
