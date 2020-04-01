@@ -11,5 +11,5 @@ public abstract class AbstractPage {
         PageFactory.initElements(driver, this);
     }
 
-    abstract void open();
+    public abstract <T> T open(Class<T> type);
 }

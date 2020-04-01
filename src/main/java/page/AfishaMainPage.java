@@ -8,8 +8,11 @@ public class AfishaMainPage extends AbstractPage {
 
     public final static String URL = "https://afisha.tut.by/";
 
-    @FindBy (xpath = "//a[@class='name-resource' and contains(text(), 'АФИША')]")
+    @FindBy (xpath = "//a[@class='name-resource']")
     private WebElement afishaLogo;
+
+    @FindBy (xpath = "//a[contains(@title, 'Концерты')]")
+    private WebElement concertsButton;
 
     public AfishaMainPage(WebDriver driver) {
         super(driver);
@@ -20,7 +23,14 @@ public class AfishaMainPage extends AbstractPage {
     }
 
     @Override
-    public void open(){
+    public <T> T open(Class<T> type){
         driver.get(URL);
+        return (T) this;
     }
+
+    public ConcertsMainPage clickConcertsButton(){
+        concertsButton.click();
+        return new ConcertsMainPage(driver);
+    }
+
 }
