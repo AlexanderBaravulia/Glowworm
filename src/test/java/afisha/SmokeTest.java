@@ -12,7 +12,7 @@ public class SmokeTest extends BaseTest {
 
     @Test
     public void checkLogoTest() {
-        afishaMainPage.open(AfishaMainPage.class).isLogoPresent();
+        afishaMainPage.open(AfishaMainPage.class);
         Assert.assertTrue(afishaMainPage.isLogoPresent(), "Afisha page is not opened");
     }
 

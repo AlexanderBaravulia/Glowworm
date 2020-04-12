@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class ConcertsMainPage extends AbstractPage {
 
-    private final static String CONCERTS_TITLE = "Концерты";
-
     @FindBy (xpath = "//li[@class='main_menu_item m-orange selected active ']/a")
     private WebElement activeConcertsButton;
 
@@ -24,7 +22,7 @@ public class ConcertsMainPage extends AbstractPage {
     }
 
     public boolean isConcertButtonActive(){
-        return CONCERTS_TITLE.equals(activeConcertsButton.getText());
+        return activeConcertsButton.getCssValue("background-image").contains("192, 84, 0");
     }
 
     public EventDescriptionPage clickFirstEvent(){
