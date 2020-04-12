@@ -24,7 +24,6 @@ public class BaseTest {
     public void setUp() {
         WebDriverProvider.get(browserProperties.get("browser").toString());
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @AfterTest
