@@ -9,7 +9,6 @@ import page.ConcertsMainPage;
 public class SmokeTest extends BaseTest {
 
     private AfishaMainPage afishaMainPage = new AfishaMainPage(webDriver);
-    private ConcertsMainPage concertsMainPage = new ConcertsMainPage(webDriver);
 
     @Test
     public void checkLogoTest() {

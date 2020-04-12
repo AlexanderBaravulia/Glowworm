@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeTest" parallel="none" verbose="1">
+    <test name="SmokeTest" parallel="true" thread-count="5">
+        <classes>
+            <class name="afisha.SmokeTest">
+            </class>
+        </classes>
+    </test>
+</suite>
